@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encryption App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-lg">
+      <h1 class="text-2xl font-bold text-center mb-6">
+        Enigma Enkripsi & Dekripsi
+      </h1>
+      <form method="POST" enctype="multipart/form-data">
+        <div class="mb-4">
+          <label for="file" class="block text-sm font-medium text-gray-700"
+            >Upload File:</label
+          >
+          <input
+            type="file"
+            name="file"
+            required
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="key" class="block text-sm font-medium text-gray-700"
+            >Masukkan key:</label
+          >
+          <input
+            type="text"
+            name="key"
+            required
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="cipher" class="block text-sm font-medium text-gray-700"
+            >Pilih Rumus:</label
+          >
+          <select
+            name="cipher"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option value="vigenere">Vignere</option>
+            <option value="rot13">ROT13</option>
+            <option value="caesar">Caesar Cipher</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="operation" class="block text-sm font-medium text-gray-700"
+            >Pilih Metode:</label
+          >
+          <select
+            name="operation"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option value="encrypt">Enkripsi</option>
+            <option value="decrypt">Dekripsi</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label
+            for="format_type"
+            class="block text-sm font-medium text-gray-700"
+            >Pilih Format:</label
+          >
+          <select
+            name="format_type"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option value="txt">TXT</option>
+            <option value="pdf">PDF</option>
+            <option value="docx">DOCX</option>
+            <option value="pptx">PPTX</option>
+            <option value="xlsx">XLSX</option>
+            <option value="png">PNG</option>
+            <option value="jpg">JPG</option>
+            <option value="jpeg">JPEG</option>
+          </select>
+        </div>
+        <button
+          type="submit"
+          class="w-full mx-auto bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition duration-200"
+        >
+          Download
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
